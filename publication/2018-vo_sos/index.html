@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-us">
 <head>
 
@@ -147,21 +147,21 @@
 
   
 <div class="article-header">
-  <img src="/img/VO-SOS/noncentral_absolute_pose_registration.png" class="article-banner" itemprop="image">
+  <img src="/img/VO-SOS/cf_diagram.png" class="article-banner" itemprop="image">
   <span class="article-header-caption">Noncentral 3D pose registration for the single-camera SOS</span>
 </div>
 
 
 
   <div class="container pub-title">
-    <h1 itemprop="name">Visual Odometry with a Single-Camera Stereo Omnidirectional System</h1>
+    <h1 itemprop="name">Keeping a good attitude: A quaternion-based orientation filter for IMUs and MARGs</h1>
     <span class="pub-authors" itemprop="author">
       
-      <strong>Carlos Jaramillo</strong>, Liang Yang, J. Pablo Munoz, Yuichi Taguchi, Jizhong Xiao
+      <strong>Roberto G. Valenti</strong>, Ivan Dryanovski, Jizhong Xiao
       
     </span>
     <span class="pull-right">
-      
+<!--      
 <div class="share-box" aria-hidden="true">
   <ul class="share">
     <li>
@@ -201,7 +201,7 @@
   </ul>
 </div>
 
-
+-->
     </span>
   </div>
 
@@ -211,8 +211,7 @@
   
 
   <h3>Abstract</h3>
-  <p class="pub-abstract" itemprop="text">This paper presents the advantages of a single-camera stereo omnidirectional system (SOS) in estimating egomotion in real-world environments. Dynamic conditions and the lack of features to track in the observable scene affect the pose estimation of all narrow-view systems. We compare the tracking accuracy and stability of the single-camera SOS versus an RGB-D device under various real circumstances. Our numerical evaluation is performed with respect to ground truth 3D data obtained from a motion capture system. The datasets and experimental results we provide are unique due to the nature of our catadioptric omnistereo rig, and the situations in which we captured these motion sequences. We have implemented a tracking system with proven correctness for both synthetic and real scenes. This implementation does not make any motion model assumptions, and it maintains a consistent configuration among the compared sensors. Our experimental outcomes confer the robustness in 3D metric visual odometry estimation that the single-camera SOS can achieve under normal and special conditions in which other perspective view systems such as RGB-D cameras would fail.</p>
-
+  <p class="pub-abstract" itemprop="text">Orientation estimation using low cost sensors is an important task for Micro Aerial Vehicles (MAVs) in order to obtain a good feedback for the attitude controller. The challenges come from the low accuracy and noisy data of the MicroElectroMechanical System (MEMS) technology, which is the basis of modern, miniaturized inertial sensors. In this article, we describe a novel approach to obtain an estimation of the orientation in quaternion form from the observations of gravity and magnetic field. Our approach provides a quaternion estimation as the algebraic solution of a system from inertial/magnetic observations. We separate the problems of finding the “tilt” quaternion and the heading quaternion in two sub-parts of our system. This procedure is the key for avoiding the impact of the magnetic disturbances on the roll and pitch components of the orientation when the sensor is surrounded by unwanted magnetic flux. We demonstrate the validity of our method first analytically and then empirically using simulated data. We propose a novel complementary filter for MAVs that fuses together gyroscope data with accelerometer and magnetic field readings. The correction part of the filter is based on the method described above and works for both IMU (Inertial Measurement Unit) and MARG (Magnetic, Angular Rate, and Gravity) sensors. We evaluate the effectiveness of the filter and show that it significantly outperforms other common methods, using publicly available datasets with ground-truth data recorded during a real flight experiment of a micro quadrotor helicopter.
   
   <div class="row">
     <div class="col-sm-1"></div>
@@ -273,23 +272,18 @@
 
 
 
-<a class="btn btn-primary btn-outline" href="https://youtu.be/c5tyHqEkKQA">
+<a class="btn btn-primary btn-outline" href="https://www.youtube.com/watch?v=RmWpire__Zw">
   Video
 </a>
 
 
-<a class="btn btn-primary btn-outline" href="https://github.com/ubuntuslave/vo_single_camera_sos">
-  Code
+<a class="btn btn-primary btn-outline" href="http://wiki.ros.org/imu_complementary_filter">
+  source
 </a>
 
 
-<a class="btn btn-primary btn-outline" href="https://ubuntuslave.github.io/project/vo_sos/#datasets">
-  Dataset
-</a>
-
-
-<a class="btn btn-primary btn-outline" href="https://ubuntuslave.github.io/project/vo_sos/">
-  Project
+<a class="btn btn-primary btn-outline" href="https://http://www.mdpi.com/1424-8220/15/8/19302">
+  publication
 </a>
 
 
